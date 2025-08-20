@@ -1,16 +1,18 @@
-package com.example.androidunittesting.QuoteFyAppForAndroidTest
+package com.example.androidunittesting
 
 import android.content.Intent
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
+import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.activityScenarioRule
-import com.example.androidunittesting.R
+import com.example.androidunittesting.QuoteFyAppForAndroidTest.QuoteFyActivity
 import org.hamcrest.core.AllOf.allOf
 import org.junit.Rule
 import org.junit.Test
@@ -26,7 +28,8 @@ class QuoteFyActivityTest {
         onView(withId(R.id.btn_next)).perform(click())
         onView(withId(R.id.btn_next)).perform(click())
         onView(withId(R.id.btn_next)).perform(click())
-        onView(withId(R.id.quoteText)).check(matches(withText("Difficulties increase the nearer we get to the goal.")))
+        onView(withId(R.id.quoteText))
+            .check(ViewAssertions.matches(ViewMatchers.withText("Difficulties increase the nearer we get to the goal.")))
     }
 
     @Test

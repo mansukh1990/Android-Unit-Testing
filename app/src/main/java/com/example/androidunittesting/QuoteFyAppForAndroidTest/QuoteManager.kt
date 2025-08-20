@@ -1,4 +1,4 @@
-package com.example.androidunittesting
+package com.example.androidunittesting.QuoteFyAppForAndroidTest
 
 import android.content.Context
 import com.google.gson.Gson

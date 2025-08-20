@@ -1,6 +1,6 @@
 package com.example.androidunittesting.utils
 
-class Utils {
+class   Utils {
 
     fun validatePassword(input: String) = when {
         input.isBlank() -> {

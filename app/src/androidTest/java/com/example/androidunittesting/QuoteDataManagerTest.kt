@@ -2,6 +2,8 @@ package com.example.androidunittesting
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
+import com.example.androidunittesting.QuoteFyAppForAndroidTest.Quote
+import com.example.androidunittesting.QuoteFyAppForAndroidTest.QuoteManager
 import com.google.gson.JsonSyntaxException
 import org.junit.Assert.assertEquals
 import org.junit.Test
