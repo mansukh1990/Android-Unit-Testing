@@ -8,7 +8,8 @@ import org.junit.runners.Parameterized
 
 @RunWith(value = Parameterized::class)
 class ParameterizedExample(
-    private val input: String, private val expectedValue: Boolean
+    private val input: String,
+    private val expectedValue: Boolean
 ) {
     @Test
     fun test() {
